@@ -250,10 +250,6 @@ This is useful for sanity-checking sampling intervals and dataset quality.
 - **TMS (Trend Matching Score)**  
   Fraction of time steps where the sign of the change matches between model and ground truth, reflecting how well the model tracks the true trend:
 
-  \[
-  \text{TMS} = \frac{1}{N-1} \sum_{i} \mathbb{1}\left[ \text{sign}(r_{vlm,i+1}-r_{vlm,i}) = \text{sign}(r_{gt,i+1}-r_{gt,i}) \right]
-  \]
-
 ---
 
 ### Typical Workflow
