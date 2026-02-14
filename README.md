@@ -115,7 +115,7 @@ Open `Call_Gemini.ipynb` and run all cells:
       - Output one reading every 200 ms (e.g., 5800, 6000, 6200, ...).
     - Output format: **JSON array only**, each object:
 
-      ```json
+      ```text
       {"ts_ms": integer, "reading": float, "confidence": float}
       ```
 
