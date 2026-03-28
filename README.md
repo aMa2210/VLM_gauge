@@ -4,6 +4,9 @@ This repository explores and evaluates vision-language models on **industrial an
 Given gauge videos, the model outputs time-series readings, which are then aligned with encoder-verified ground truth to compute MAE / RMSE / TMS and quantify performance in industrial metrology scenarios.
 
 ---
+### Dataset
+
+The dataset used in this project is publicly available on Zenodo:**[Two gauge types](https://doi.org/10.5281/zenodo.19040441)**
 
 ### Features
 
