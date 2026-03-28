@@ -6,7 +6,7 @@ Given gauge videos, the model outputs time-series readings, which are then align
 ---
 ### Dataset
 
-The dataset used in this project is publicly available on Zenodo:**[Two gauge types](https://doi.org/10.5281/zenodo.19040441)**
+The dataset used in this project is publicly available on Zenodo:**https://doi.org/10.5281/zenodo.19040441**
 
 ### Features
 
