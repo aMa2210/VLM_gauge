@@ -7,10 +7,7 @@ Given gauge videos, the model outputs time-series readings, which are then align
 
 ### Dataset
 
-| Dataset | Description | Link |
-|---------|-------------|------|
-| Original dataset | 3 gauge types × 6 speed videos, used in the main paper | **https://doi.org/10.5281/zenodo.20125627** |
-| Rebuttal dataset | 3 gauge types × 3 motion directions × 6 speeds | **[ZENODO_REBUTTAL_DOI]** |
+3 gauge types × 3 motion directions × 6 speeds | **[https://zenodo.org/records/20125627]** |
 
 > Video files are hosted on Zenodo and not included in this repository. Download and place them under `Dataset/` following the directory structure below.
 
@@ -56,12 +53,9 @@ Analysed/
 └── GPT/
 
 Figures/
-├── Circular_result.png           temporal profiles — Dial Gauge (original)
-├── Vernier_result.png            temporal profiles — Depth Gauge (original)
-├── Linear_result.png             temporal profiles — Depth Gauge w/o vernier (original)
-├── Rebuttal_Circular_result.png  temporal profiles — Dial Gauge (rebuttal)
-├── Rebuttal_Vernier_result.png   temporal profiles — Depth Gauge (rebuttal)
-└── Rebuttal_Linear_result.png    temporal profiles — Depth Gauge w/o vernier (rebuttal)
+├── Rebuttal_Circular_result.png  temporal profiles — Dial Gauge
+├── Rebuttal_Vernier_result.png   temporal profiles — Depth Gauge
+└── Rebuttal_Linear_result.png    temporal profiles — Depth Gauge w/o vernier
 ```
 
 **Notebooks / scripts:**
@@ -71,8 +65,7 @@ Figures/
 | `Call_Gemini.ipynb` | Gemini inference — all 3 gauges × 2 models × 2 strategies (single batch run) |
 | `Call_GPT.ipynb` | GPT inference — all 3 gauges × 2 models × 2 strategies (single batch run) |
 | `Analyse.ipynb` | Compute MAE / RMSE / TMS from `Results/` → save to `Analysed/` |
-| `plot_temporal.ipynb` | Time-series figures for original dataset |
-| `plot_temporal_0508.ipynb` | Time-series figures for rebuttal dataset (best/worst speed per direction) |
+| `plot_temporal.ipynb` | Time-series figures(best/worst speed per direction) |
 | `Linear_label_dial.ipynb` | Generate `Dataset/1_label/` ground truth |
 | `Linear_label_depth.ipynb` | Generate `Dataset/2_label/` ground truth |
 | `Linear_label_depth_without_vernier.ipynb` | Generate `Dataset/3_label/` ground truth |
@@ -123,9 +116,7 @@ Open `Analyse.ipynb` and run all cells. It iterates all result folders, parses J
 
 #### 3. Visualize
 
-- `plot_temporal.ipynb` — generates temporal profile figures for the original dataset (all 6 speeds per gauge)
-- `plot_temporal_0508.ipynb` — generates rebuttal figures: for each gauge and motion direction, selects the best and worst speed (by average MAE across all models), producing a 2-row × 3-column figure
-
+- `plot_temporal.ipynb` — generates temporal profile figures
 ---
 
 ### Evaluation Metrics
