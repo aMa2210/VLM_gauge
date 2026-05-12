@@ -9,7 +9,7 @@ Given gauge videos, the model outputs time-series readings, which are then align
 
 ### Dataset
 
-3 gauge types × 3 motion directions × 6 speeds | **[https://zenodo.org/records/20125627]** |
+3 gauge types × 3 motion directions × 6 speeds | **[https://zenodo.org/records/20147961]**
 
 > Video files are hosted on Zenodo and not included in this repository. Download and place them under `Dataset/` following the directory structure below.
 
