@@ -37,14 +37,23 @@ Given gauge videos, the model outputs time-series readings, which are then align
 ### Project Structure
 
 ```
-Dataset/
-├── 1.- Analog Dial Gauge/        dial gauge videos (.mp4)
-├── 2.- Analog Depth Gauge/       depth gauge videos (.mp4)
-├── 3.- Analog Depth Gauge_without vernier/   depth gauge (no vernier) videos
+Dataset/                          ← download from Zenodo and place here
+├── 1.- Analog Dial Gauge/
+│   ├── UP/                       videos — increasing direction (6 speeds)
+│   ├── DOWN/                     videos — decreasing direction (6 speeds)
+│   └── UP_DOWN/                  videos — bidirectional (6 speeds)
+├── 2.- Analog Depth Gauge/
+│   ├── OPENING/
+│   ├── CLOSING/
+│   └── OPENING-CLOSING/
+├── 3.- Analog Depth Gauge_without vernier/
+│   ├── OPENING/
+│   ├── CLOSING/
+│   └── OPENING-CLOSING/
 ├── 1_label/                      ground truth Excel files (Gauge 1)
 ├── 2_label/                      ground truth Excel files (Gauge 2)
 ├── 3_label/                      ground truth Excel files (Gauge 3)
-└── metadata/                     instrument metadata (range, graduation, etc.)
+└── metadata/                     instrument metadata (.xlsx + .json)
 
 Results/
 ├── Gemini/<GaugeName>_<model>[_naive]/   raw Gemini outputs (*_Raw_Results.xlsx)
@@ -68,12 +77,6 @@ Figures/
 | `Call_GPT.ipynb` | GPT inference — all 3 gauges × 2 models × 2 strategies (single batch run) |
 | `Analyse.ipynb` | Compute MAE / RMSE / TMS from `Results/` → save to `Analysed/` |
 | `plot_temporal.ipynb` | Time-series figures(best/worst speed per direction) |
-| `Linear_label_dial.ipynb` | Generate `Dataset/1_label/` ground truth |
-| `Linear_label_depth.ipynb` | Generate `Dataset/2_label/` ground truth |
-| `Linear_label_depth_without_vernier.ipynb` | Generate `Dataset/3_label/` ground truth |
-| `Linear_label_dial_0508.ipynb` | Generate Dataset_0508 ground truth (Gauge 1) |
-| `Linear_label_depth_0508.ipynb` | Generate Dataset_0508 ground truth (Gauge 2) |
-| `Linear_label_depth_without_vernier_0508.ipynb` | Generate Dataset_0508 ground truth (Gauge 3) |
 | `Extract_video_metaInfo.ipynb` | Check FPS / resolution / duration via OpenCV |
 | `Calculate_Latency.ipynb` | API latency statistics |
 
@@ -139,4 +142,4 @@ Time alignment: `pd.merge_asof(..., tolerance=200)` — nearest-neighbor match w
 2. Set `GOOGLE_API_KEY` and `OPENAI_API_KEY` environment variables.
 3. Run `Call_Gemini.ipynb` and `Call_GPT.ipynb` to generate raw results.
 4. Run `Analyse.ipynb` to compute MAE / RMSE / TMS → exported to `Analysed/`.
-5. Run `plot_temporal.ipynb` or `plot_temporal_0508.ipynb` to generate figures.
+5. Run `plot_temporal.ipynb` to generate figures.
