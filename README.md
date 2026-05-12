@@ -1,5 +1,7 @@
 ## VLM Gauge – Vision-Language Models for Analog Gauge Reading
 
+**Paper:** [arXiv:2604.22829](https://arxiv.org/abs/2604.22829) — under revision at *IEEE Instrumentation and Measurement Magazine*
+
 This repository explores and evaluates vision-language models on **industrial analog gauge reading** tasks.  
 Given gauge videos, the model outputs time-series readings, which are then aligned with encoder-verified ground truth to compute MAE / RMSE / TMS and quantify performance in industrial metrology scenarios.
 
