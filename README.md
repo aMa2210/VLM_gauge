@@ -53,9 +53,9 @@ Analysed/
 └── GPT/
 
 Figures/
-├── Rebuttal_Circular_result.png  temporal profiles — Dial Gauge
-├── Rebuttal_Vernier_result.png   temporal profiles — Depth Gauge
-└── Rebuttal_Linear_result.png    temporal profiles — Depth Gauge w/o vernier
+├── Circular_result.png  temporal profiles — Dial Gauge
+├── Vernier_result.png   temporal profiles — Depth Gauge
+└── Linear_result.png    temporal profiles — Depth Gauge w/o vernier
 ```
 
 **Notebooks / scripts:**
@@ -69,9 +69,9 @@ Figures/
 | `Linear_label_dial.ipynb` | Generate `Dataset/1_label/` ground truth |
 | `Linear_label_depth.ipynb` | Generate `Dataset/2_label/` ground truth |
 | `Linear_label_depth_without_vernier.ipynb` | Generate `Dataset/3_label/` ground truth |
-| `Linear_label_dial_0508.ipynb` | Generate rebuttal ground truth (Gauge 1) |
-| `Linear_label_depth_0508.ipynb` | Generate rebuttal ground truth (Gauge 2) |
-| `Linear_label_depth_without_vernier_0508.ipynb` | Generate rebuttal ground truth (Gauge 3) |
+| `Linear_label_dial_0508.ipynb` | Generate Dataset_0508 ground truth (Gauge 1) |
+| `Linear_label_depth_0508.ipynb` | Generate Dataset_0508 ground truth (Gauge 2) |
+| `Linear_label_depth_without_vernier_0508.ipynb` | Generate Dataset_0508 ground truth (Gauge 3) |
 | `Extract_video_metaInfo.ipynb` | Check FPS / resolution / duration via OpenCV |
 | `Calculate_Latency.ipynb` | API latency statistics |
 
